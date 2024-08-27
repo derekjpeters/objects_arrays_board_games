@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects & Arrays</title>
+</head>
+<body>
+    <script>
+        let car = {
+            brand: 'Mitsubishi',
+            model: 'Outlander',
+            year: 2024
+        }
+        console.log(car);
+        /* object.propertyname or object['propertyname'] */
+
+        console.log(car.brand); //output should be Mitsubishi
+        console.log(car['year']); //output: 2024
+        car.color = 'Blue';
+        console.log(car.color);
+        delete car.color;
+        console.log(car.color);
+
+        let fruits = ['apple', 'banana', 'cherry'];
+        console.log(fruits);
+        console.log(fruits[1]);
+        fruits[2] = 'kiwi';
+        console.log(fruits);
+        console.log(fruits.length);
+
+        let string = "Hello, I hope your day is going good"
+        let words = string.split(' '); //Split by space
+        console.log(string);
+        console.log(words);
+        console.log(words.length);
+
+        function buildBoardGame(title, players, playTime, genre, publisher) {
+            return {
+                title: title,
+                players: players,
+                playTime: playTime,
+                genre: genre,
+                publisher: publisher
+            };
+        }
+
+        //Function to update a property of a board game
+        function updateBoardGameProperty(game, property, value) {
+            game[property] = value;
+            console.log(`Updated ${property} to:`,game[property]);
+        }
+
+        function deleteBoardGameProperty(game, property) {
+            delete game[property];
+            console.log(`Deleted ${property} from the game object`);
+        }
+
+        function createBoardGameCollection(){
+            return ['Monopoly', 'Life', 'Jenga'];
+        }
+
+        console.log(createBoardGameCollection());
+
+        //Function to update an element int he boardgame array
+        function updateBoardGameCollection(collection, index, newValue){
+            collection[index] = newValue;
+            console.log(`Updated board game at ${index} to:`, collection[index]);
+        }
+
+        function splitDescription(description) {
+            return description.split(' ');
+        }
+
+        //Build user mock responses
+        let game1 = buildBoardGame('Monopoly', 4, 4, 'Group', 'MB');
+        console.log(game1);
+        let game2 = buildBoardGame('Life', 4, 3, 'Family', 'Marmalade');
+        console.log(game2);
+        let game3 = buildBoardGame('Jenga', 2, 1, 'Family', 'Hasbro');
+        console.log(game3);
+
+        //Update property in game1
+        updateBoardGameProperty(game1, 'genre', "Family");
+        console.log(game1);
+
+        //Add a new proptery to game2
+        updateBoardGameProperty(game2, 'Variations', ["Super Mario", "Star Wars", "Disney Life", "Jurassic Park"]);
+        console.log(game2);
+
+        
+
+    </script>
+</body>
+</html>
