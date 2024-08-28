@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looping</title>
-</head>
-<body>
-    <script>
-        
-    </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Looping</title>
+	</head>
+	<body>
+		<script>
+			const toDoList = [
+				"Shopping",
+				"Amazon Work",
+				"Meeting",
+				"Exercise",
+				"Wash Dishes",
+				"Pay Water Bill",
+			];
+
+			/* for (initialization; condition; final-expression) {
+                //Statements to be executed or code to be executed
+            } */
+
+			console.log(toDoList);
+			for (let index in toDoList) {
+				//log current index to the console
+				console.log(index);
+			}
+			for (let index in toDoList) {
+				//Access the element at the current index and print to the console
+				console.log(toDoList[index]);
+			}
+
+			const grades = [85, 92, 78, 96, 88];
+			let total = 0;
+			console.log(total);
+			for (let i = 0; i < grades.length; i++) {
+				//Adding each grade to the total
+				total += grades[i];
+			}
+			console.log(total);
+			const average = total / grades.length;
+			console.log("Average Grade:", average);
+
+			const studentProfile = {
+				name: "John",
+				gradeLevel: 11,
+				gpa: 3.8,
+			};
+			console.log(studentProfile);
+			//Looping over the object properties
+			for (let properties in studentProfile) {
+				let value = studentProfile[properties];
+				console.log(`${properties}: ${value}`);
+			}
+			const students = [
+				{
+					name: "John",
+					gradeLevel: 11,
+					gpa: 3.8,
+				},
+				{
+					name: "Jane",
+					gradeLevel: 12,
+					gpa: 3.6,
+				},
+				{
+					name: "Alice",
+					gradeLevel: 10,
+					gpa: 3.9,
+				},
+			];
+
+              let totalGPA = 0; //Initialize totalGPA to sum all students
+              for (i = 0; i < students.length; i++) {
+                let student = students[i];
+                totalGPA += student.gpa;
+                console.log(`Name: ${student.name}, Grade Level: ${student.gradeLevel} GPA: ${student.gpa} `);
+              }   
+              console.log("Total GPA", totalGPA);
+              const averageGPA = totalGPA/ students.length;
+              console.log("Average GPA:", averageGPA);
+
+		</script>
+	</body>
 </html>
