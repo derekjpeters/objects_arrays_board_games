@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>For/While Loops</title>
+	</head>
+	<body>
+		<script>
+			/* 
+    for (initialization; condition; increment/decrement){
+        code to be executed
+    }
+
+    
+    */
+
+			//Example of a for loop
+// 			for (let i = 0; i < 10; i++) {
+// 				console.log("Iteration number: " + i);
+// 			}
+
+// 			let students = ["Alice", "David", "Mary", "PJ", "Inderpreet"];
+// 			for (let i = 0; i < students.length; i++) {
+// 				console.log(students[i]);
+// 			}
+// 			/* 
+//  while (condition) {
+//         code to be executed
+//     }
+//     */
+//     let i = 0;
+//     while (i < 10) {
+//         console.log("Iteration Number: " + i);
+//         i++;
+//     }
+//     let number = 1;
+//     while (number <= 10) {
+//         if (number % 2 === 0) {
+//             console.log(number);
+//         }
+//         number++;
+//     }
+
+//     for (let i = 10; i > 0; i--) {
+//         console.log("Interation Number: " +i);
+//     };
+
+    // let correctNumber = 7;
+    // let guess = prompt("Guess the Number: ");
+    // while(parseInt(guess) !== correctNumber) {
+    //     guess = prompt("Wrong! Try Again");
+    // }
+    // console.log("Congratulations! You guessed the correct number.");
+
+    // const housePoints = [150, 200, 120, 180, 300, 250, 100, 170];
+    // let totalPoints = 0;
+    // for (let i = 0; i<housePoints.length; i++) {
+    //     totalPoints += housePoints[i];
+    // }
+
+    // console.log("Total House Points: " + totalPoints);
+
+    const slytherinPoints = [150, 120, 300, 100];
+    const gryffindorPoints = [200, 180, 250, 170];
+
+    let totalSlyterinPoints = 0;
+    let totalGryffindorPoints = 0;
+
+    for (let i = 0; i < slytherinPoints.length; i++) {
+        totalSlyterinPoints += gryffindorPoints[i];
+    };
+
+    for (let i = 0; i < gryffindorPoints.length; i++) {
+        totalGryffindorPoints += gryffindorPoints[i];
+    }
+
+    console.log("Total Slytherin Points: " + totalSlyterinPoints);
+    console.log("Total Gryffindor Point: " + totalGryffindorPoints);
+
+    const students = ["Harry", "Hermione", "Ron", "Draco", "Luna"];
+    const housePoints = [200, 250, 180, 300, 150];
+
+    let studentName = "Hermione";
+    let index = 0;
+    let found = false;
+
+    while (index < students.length && !found) {
+        if (students[index] === studentName) {
+            console.log(studentName + " has " + housePoints[index] + " points. ");
+            found = true;
+        }
+        index ++;
+    }
+    if (!found) {
+        console.log(studentName + " was not found");
+    }
+    
+
+		</script>
+	</body>
+</html>
