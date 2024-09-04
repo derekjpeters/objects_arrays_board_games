@@ -7,78 +7,70 @@
 	</head>
 	<body>
 		<script>
-			const toDoList = [
-				"Shopping",
-				"Amazon Work",
-				"Meeting",
-				"Exercise",
-				"Wash Dishes",
-				"Pay Water Bill",
-			];
+			let colors = ['red', 'blue', 'green', 'yellow'];
+			console.log(colors.length);
+			colors.push('orange');
+			console.log(colors.length);
+			console.log(colors);
+			let lastColor = colors.pop();
+			console.log(lastColor);
+			console.log(colors);
+			console.log(colors.length);
+			let colorsSub = colors.slice(1,3);
+			console.log(colorsSub);
 
-			/* for (initialization; condition; final-expression) {
-                //Statements to be executed or code to be executed
-            } */
+			let numbers = [1 ,2, 3, 4, 5];
+			console.log(numbers);
+			let subArray = numbers.slice(1,4);
+			console.log(subArray);
 
-			console.log(toDoList);
-			for (let index in toDoList) {
-				//log current index to the console
-				console.log(index);
+			let animals = ['lion', 'cat', 'bird', 'dog'];
+			console.log(animals);
+			let index = animals.indexOf('bird');
+			console.log(index);
+			animals.push('elephant');
+			index = animals.indexOf('dog');
+			console.log(index);
+			console.log(animals);
+
+			numbers = [];
+			// numbers.push(1);
+			// numbers.push(2);
+			// numbers.push(3);
+			for (let i = 1; i <= 10; i++) {
+				numbers.push(i);
 			}
-			for (let index in toDoList) {
-				//Access the element at the current index and print to the console
-				console.log(toDoList[index]);
+			console.log(numbers);
+
+			console.log(animals);
+			while (animals.length > 2) {
+				animals.pop();
 			}
 
-			const grades = [85, 92, 78, 96, 88];
-			let total = 0;
-			console.log(total);
-			for (let i = 0; i < grades.length; i++) {
-				//Adding each grade to the total
-				total += grades[i];
-			}
-			console.log(total);
-			const average = total / grades.length;
-			console.log("Average Grade:", average);
+			console.log(animals);
 
-			const studentProfile = {
-				name: "John",
-				gradeLevel: 11,
-				gpa: 3.8,
-			};
-			console.log(studentProfile);
-			//Looping over the object properties
-			for (let properties in studentProfile) {
-				let value = studentProfile[properties];
-				console.log(`${properties}: ${value}`);
-			}
-			const students = [
-				{
-					name: "John",
-					gradeLevel: 11,
-					gpa: 3.8,
-				},
-				{
-					name: "Jane",
-					gradeLevel: 12,
-					gpa: 3.6,
-				},
-				{
-					name: "Alice",
-					gradeLevel: 10,
-					gpa: 3.9,
-				},
-			];
+			let letters = ['a', 'b', 'c', 'd', 'e', 'f'];
+			let subArrays = [];
+			console.log(letters.length);
+			for (let i = 0; i < letters.length -2; i++) {
+				subArrays.push(letters.slice(i, i +3));
+			} 
+			console.log(subArrays);
 
-              let totalGPA = 0; //Initialize totalGPA to sum all students
-              for (i = 0; i < students.length; i++) {
-                let student = students[i];
-                totalGPA += student.gpa;
-                console.log(`Name: ${student.name}, Grade Level: ${student.gradeLevel} GPA: ${student.gpa} `);
-              }   
-              console.log("Total GPA", totalGPA);
-              const averageGPA = totalGPA/ students.length;
-              console.log("Average GPA:", averageGPA);
+			numbers = []
+			console.log(numbers);
+			for (let i = 1; i <= 5; i++) {
+				numbers.push(i * 2);
+			}
+
+			console.log(numbers);
+
+			for (let i = 1; i <= 5; i++) {
+				numbers.push(i * 2 -1);
+			}
+
+			console.log(numbers);
+
 
 		</script>
 	</body>
